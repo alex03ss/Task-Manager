@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+.Header {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2d3436;
+}
+
+.addTaskContainer {
+  background: white;
+  width: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.addTaskContainer h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 95%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #0984e3;
+}
+
+button[type="submit"] {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #0984e3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0767b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 400px;
+  margin: 20px auto;
+}
+
+li {
+  background: white;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+li button {
+  background: #d63031;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s ease;
+}
+
+li button:hover {
+  background: #b02425;
+}
+
+.Footer {
+    margin-top: 40px; 
+    padding: 20px 0; 
+    text-align: center; 
+    color: #636e72; 
+    font-size: 14px; 
+    border-top: 1px solid #dfe6e9;
+}
