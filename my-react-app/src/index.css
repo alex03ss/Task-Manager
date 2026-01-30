@@ -2,9 +2,37 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
-  background: #f5f7fa;
-  color: #333;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
+.bg-blob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #6c5ce7;
+  filter: blur(120px);
+  opacity: 0.35;
+  border-radius: 50%;
+  animation: float 12s infinite ease-in-out;
+}
+
+.bg-blob:nth-child(2) {
+  background: #00cec9;
+  width: 500px;
+  height: 500px;
+  top: 40%;
+  left: 60%;
+  animation-duration: 16s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) }
+  50% { transform: translateY(-40px) }
+  100% { transform: translateY(0px) }
+}
+
 
 .Header {
   text-align: center;

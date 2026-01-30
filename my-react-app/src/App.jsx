@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Container, Typography, Paper, Box } from "@mui/material";
 import AddTask from "./AddTask";
 import TaskList from "./TaskList";
 import Footer from "./Footer";
@@ -26,12 +27,20 @@ function App() {
   };
 
   return (
-    <>
-      <h1 className="Header">Task Manager</h1>
-      <AddTask onAddTask={addTask} />
-      <TaskList tasks={tasks} onDelete={deleteTask} />
-      <Footer />
-    </>
+    <Container maxWidth="sm" sx={{ mt: 4, position: 'relative', zIndex: 2 }}>
+      <Paper elevation={3} sx={{ p: 3, background: 'rgba(255,255,255,0.08)', boxShadow: 3, backdropFilter: 'blur(20px)' }}>
+        <Typography variant="h3" align="center" gutterBottom sx={{ color: '#fff' }}>
+          Task Manager
+        </Typography>
+        <Box sx={{ mb: 2, background: 'transparent' }}>
+          <AddTask onAddTask={addTask} />
+        </Box>
+        <TaskList tasks={tasks} onDelete={deleteTask} />
+      </Paper>
+      <Box sx={{ mt: 4 }}>
+        <Footer />
+      </Box>
+    </Container>
   );
 }
 
